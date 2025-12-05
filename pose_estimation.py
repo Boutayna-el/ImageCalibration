@@ -4,7 +4,7 @@ import glob
 import os
 
 # CONFIGURATION 
-taille_carre_mm = 24.0
+taille_carre_mm = 25.0
 dims_damier = (9, 6)
 data= r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP\data"
 path = r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP"
