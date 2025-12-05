@@ -7,8 +7,8 @@ import os
 # CONFIGURATION
 taille_carre_mm = 25.0  
 dims_damier = (9, 6)    
-data = r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP\data"
-path = r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP"
+data = r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP\ImageCalibration\data"
+path = r"C:\Users\elmou\OneDrive\Desktop\Master VMI FA\cours\seqvideo\TP\ImageCalibration"
 fichier_yaml = "calibration_data.yaml"
 
 # TRAITEMENT 
@@ -58,6 +58,7 @@ print("Calibration en cours...")
 # CALIBRATION
 if len(objpoints) > 0:
     ret, mtx, dist, rvecs, tvecs = cv2.calibrateCamera(objpoints, imgpoints, img_shape, None, None)
+    print(f"ERREUR RMS: {ret:.4f}")
 
     #  SAUVEGARDE EN YAML 
     cv_file = cv2.FileStorage(fichier_yaml, cv2.FILE_STORAGE_WRITE)
